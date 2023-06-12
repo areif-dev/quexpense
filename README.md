@@ -7,18 +7,19 @@ This script uses balanced virtual posts to implement a form of envelope budgetin
 ## usage: quexpense [-h] [-f FILE] description expense_account paying_account value
 
 ## positional arguments:
-  description           The description for this transaction that should appear in the firstline right after the date
-  expense_account       The expense subaccount that this transaction should count against. For example, if a transaction is for a gas
+
+  - description           The description for this transaction that should appear in the firstline right after the date
+  - expense_account       The expense subaccount that this transaction should count against. For example, if a transaction is for a gas
                         expense, the command might be `quexpense gas liabilities:discover:credit 45.00`. Omit the 'expense' top level
                         account
-  paying_account        The account to draw funds from to pay for the expense. For example, if a transaction to pay for gas is to be paid
+  - paying_account        The account to draw funds from to pay for the expense. For example, if a transaction to pay for gas is to be paid
                         on a credit card, then the command might be `quexpense gas liabilities:discover:credit 45.00`
-  value                 The amount of money to draw from the paying_account and send to expense account. Should be a number like 45.00 or
+  - value                 The amount of money to draw from the paying_account and send to expense account. Should be a number like 45.00 or
                         10. Omit '$' or other currency denotation.
 
 ## options:
-  -h, --help            show this help message and exit
-  -f FILE, --file FILE  The journal file to write the new expense to. If none is provided, then default to using $LEDGER_FILE
+ - -h, --help            show this help message and exit
+ - -f FILE, --file FILE  The journal file to write the new expense to. If none is provided, then default to using $LEDGER_FILE
 
 ## Example
 
