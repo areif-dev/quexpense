@@ -60,10 +60,10 @@ def main():
     with open(journal_file, "a") as f:
         time = datetime.now().strftime("%Y-%m-%d")
         f.write(f"\n\n{time} {args.description}\n")
-        f.write("  expenses:%s     $%.2f\n" % (args.expense_account, args.value))
-        f.write("  %s     $-%.2f\n" % (args.paying_account, args.value))
-        f.write("  [assets:budget:spendable]     $%.2f\n" % (args.value))
-        f.write("  [assets:budget:%s]     $-%.2f" % (args.expense_account, args.value))
+        f.write("  expenses:%s  $%.2f\n" % (args.expense_account, args.value))
+        f.write("  %s  $-%.2f\n" % (args.paying_account, args.value))
+        f.write("  [assets:budget:spendable]  $%.2f\n" % (args.value))
+        f.write("  [assets:budget:%s]  $-%.2f" % (args.expense_account, args.value))
 
 
 if __name__ == "__main__":
